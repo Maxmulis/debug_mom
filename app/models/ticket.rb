@@ -1,5 +1,5 @@
 class Ticket < ApplicationRecord
-  has_many_attached :photo
+  has_many_attached :photos
   belongs_to :mom, class_name: "User"
   belongs_to :helper, class_name: "User"
   has_many :ticket_categories

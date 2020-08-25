@@ -8,9 +8,12 @@ class TicketsController < ApplicationController
 
   def create
     @ticket = Ticket.new(ticket_params)
+    @ticket.mom = User.first
+    @ticket.helper = User.last
 
+    binding.pry
     if @ticket.save
-      redirect_to root
+      redirect_to root_path
     else
       render :new
     end
@@ -19,6 +22,6 @@ class TicketsController < ApplicationController
   private
 
   def ticket_params
-    params.require(:ticket).permit(:description, :photo)
+    params.require(:ticket).permit(:description, photos: [])
   end
 end
