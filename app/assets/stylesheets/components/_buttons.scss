@@ -1,3 +1,5 @@
+// Default buttons
+
 .btn-yellow {
     color: black;
     padding: 8px 24px;
@@ -23,7 +25,40 @@
   }
 
   .btn-black:hover {
+    color: white;
     padding: 10px 28px;
   }
 
   
+  .btn-yellow-small {
+    color: black;
+    padding: 8px 13px;
+    border-radius:50px;
+    font-size: 15px;
+    background: #FFBD12;
+    transition: background 0.3s ease;
+    border: 1px solid black;
+  }
+  .btn-yellow-small:hover {
+    padding: 10px 15px;
+  }
+
+  // Page buttons
+  
+  //Home Buttons
+
+  .btn-yellow-home {
+    padding: 8px 80px;
+  }
+
+  .btn-yellow-home:hover {
+    padding: 10px 85px;
+  }
+  
+  .btn-black-home {
+    padding: 8px 65px;
+  }
+
+  .btn-black-home:hover {
+    padding: 10px 70px;
+  }
