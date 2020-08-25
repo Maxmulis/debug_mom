@@ -8,12 +8,9 @@ class TicketsController < ApplicationController
 
   def create
     @ticket = Ticket.new(ticket_params)
-    @ticket.mom = User.first
-    @ticket.helper = User.last
 
-    binding.pry
     if @ticket.save
-      redirect_to root_path
+      redirect_to new_ticket_user_path(@ticket)
     else
       render :new
     end
