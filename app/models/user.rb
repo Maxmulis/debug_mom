@@ -1,6 +1,6 @@
 class User < ApplicationRecord
   validates :email, presence: true# , uniqueness: { case_sensitive: false }
-  after_create :send_welcome_email
+  # after_create :send_welcome_email
   passwordless_with :email
 
   private
