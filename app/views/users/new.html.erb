@@ -1,1 +1,8 @@
-<h1>Contact Form</h1>
+<h1>Please fill out:</h1>
+<div class="container">
+  <%= simple_form_for [ @ticket, @user ] do |f| %>
+  <%= f.input :username, label: 'Full name'%>
+  <%= f.input :email%>
+  <%= f.button :submit %>
+  <% end %>
+</div>
