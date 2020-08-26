@@ -6,7 +6,10 @@ class PagesController < ApplicationController
   end
 
   def components_test
-    
+
   end
-  
+
+  def everything_page
+  end
+
 end
