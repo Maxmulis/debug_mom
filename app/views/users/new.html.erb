@@ -1,6 +1,6 @@
 <h1>Please fill out:</h1>
 <div class="container">
-  <%= simple_form_for @user do |f| %>
+  <%= simple_form_for [ @ticket, @user ] do |f| %>
   <%= f.input :username, label: 'Full name'%>
   <%= f.input :email%>
   <%= f.button :submit %>
