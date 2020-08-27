@@ -8,7 +8,10 @@ Rails.application.routes.draw do
 
   get '/components_test', to: 'pages#components_test'
 
-  get '/everything_page', to: 'pages#everything_page'
+  get '/summary', to: 'pages#summary'
+
+  get '/success', to: 'pages#success'
+
 
 
   get '/users/sign_in'

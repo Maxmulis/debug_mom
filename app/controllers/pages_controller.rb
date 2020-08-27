@@ -9,7 +9,10 @@ class PagesController < ApplicationController
 
   end
 
-  def everything_page
+  def summary
+  end
+
+  def success
   end
 
 end
