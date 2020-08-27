@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   passwordless_for :users
 
   root to: 'pages#home'
-  resources :tickets, only: [:index, :new, :create] do
+  resources :tickets, only: [:index, :new, :create, :show, :edit, :update] do
     resources :users, only: [:index, :new, :create]
   end
 
