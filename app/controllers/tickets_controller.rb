@@ -27,7 +27,7 @@ class TicketsController < ApplicationController
 
   def update
     @ticket = Ticket.find(params[:id])
-    @ticket.update(ticket_update_params)
+    @ticket.update(ticket_params)
     redirect_to ticket_path(@ticket)
   end
 
@@ -35,9 +35,5 @@ class TicketsController < ApplicationController
 
   def ticket_params
     params.require(:ticket).permit(:description, photos: [])
-  end
-
-  def ticket_update_params
-    params.require(:ticket).permit(:description, :solved, :mom_id, :helper_id, :created_at, :updated_at, photos: [])
   end
 end
