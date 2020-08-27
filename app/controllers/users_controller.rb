@@ -12,10 +12,10 @@ class UsersController < ApplicationController
     @ticket = Ticket.find(params[:ticket_id])
 
     if @user.save
-      sign_in @user # <-- This!
+      #sign_in @user # <-- This!
       @ticket.mom = @user
       @ticket.save
-      redirect_to users_sign_in_path, flash: { notice: 'Welcome!' }
+      redirect_to ticket_path(@ticket), flash: { notice: 'Welcome!' }
     else
       render :new
     end
