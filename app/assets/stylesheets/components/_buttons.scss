@@ -1,12 +1,12 @@
 // Default buttons
 .btn-yellow {
-  color: black;
-  padding: 8px 24px;
-  border-radius: 5px;
-  font-weight: bold;
-  background: #FFBD12;
-  transition: background 0.3s ease;
-  border: 1px solid black;
+    color: black;
+    padding: 8px 24px;
+    border-radius: 5px;
+    font-weight: bold;
+    background: #FFBD12;
+    transition: background 0.3s ease;
+    border: 1px solid black;
 
   &:hover {
     padding: 10px 28px;
@@ -28,24 +28,24 @@
   }
 }
 
-
-
-.btn-yellow-small {
-  color: black;
-  padding: 8px 13px;
-  border-radius:50px;
-  font-size: 15px;
-  background: #FFBD12;
-  transition: background 0.3s ease;
-  border: 1px solid black;
-
+  .btn-yellow-small {
+    color: black;
+    padding: 8px 13px;
+    border-radius:50px;
+    font-size: 15px;
+    background: #FFBD12;
+    transition: background 0.3s ease;
+    border: 1px solid black;
+    
   &:hover {
     padding: 10px 15px;
   }
 }
 
-// Page buttons
-//Home Buttons
+
+  // Page buttons
+  //Home Buttons
+
 
 .btn-yellow-home {
   padding: 8px 80px;
@@ -53,13 +53,26 @@
   &:hover {
     padding: 10px 85px;
   }
-}
 
-.btn-black-home {
-  padding: 8px 65px;
+  .btn-black-home {
+    padding: 8px 65px;
 
   &:hover {
     padding: 10px 70px;
   }
 }
+  .btn-big-green {
+    padding: 30px 40px;
+    border-radius:150px;
+    font-size: 45px;
+    background: #00C6AE;
+    transition: background 0.3s ease;
+    border: 4px solid black;
+  }
 
+  .btn-big-green:hover {
+    padding: 30px 40px;
+    background: #07b5a0;
+    color:#02312b;
+  }
+}

@@ -6,10 +6,9 @@ class PagesController < ApplicationController
   end
 
   def components_test
-
   end
-
-  def everything_page
+  
+  def success
   end
 
 end
