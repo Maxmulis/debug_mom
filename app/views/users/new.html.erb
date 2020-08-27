@@ -1,8 +1,18 @@
-<h1>Please fill out:</h1>
-<div class="container">
-  <%= simple_form_for [ @ticket, @user ] do |f| %>
-  <%= f.input :username, label: 'Full name'%>
-  <%= f.input :email%>
-  <%= f.button :submit %>
-  <% end %>
+
+<div class="users-container">
+  <%= image_tag "contact.png" %>
+
+
+  <h1>Contact form</h1>
+  <div class="container">
+
+    <%= simple_form_for [ @ticket, @user ] do |f| %>
+    <%= f.input :username, label: 'Full name'%>
+    <%= f.input :email%>
+    <%= f.button :submit %>
+
+    <% end %>
+  </div>
 </div>
+
+
