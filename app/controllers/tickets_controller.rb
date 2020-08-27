@@ -28,6 +28,7 @@ class TicketsController < ApplicationController
   def update
     @ticket = Ticket.find(params[:id])
     @ticket.update(ticket_update_params)
+    redirect_to ticket_path(@ticket)
   end
 
   private

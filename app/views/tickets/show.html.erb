@@ -1,6 +1,11 @@
 <h3>Description:</h3>
 <%= @ticket.description  %>
 <h3>Currently uploaded pictures:</h3>
-<% @ticket.photos.each do |photo| %>
-  <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
-<% end %>
+<div>
+  <% @ticket.photos.each do |photo| %>
+    <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
+  <% end %>
+</div>
+
+<%= link_to "Yes, continue", ticket_path(@ticket), class: "btn btn-yellow btn-yellow-home" %>
+<%= link_to "No, I want to change", edit_ticket_path(@ticket), class: "btn btn-black btn-black-home" %>
