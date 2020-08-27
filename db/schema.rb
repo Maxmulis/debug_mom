@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_25_124117) do
+ActiveRecord::Schema.define(version: 2020_08_25_154240) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -60,6 +60,20 @@ ActiveRecord::Schema.define(version: 2020_08_25_124117) do
     t.index ["user_id"], name: "index_messages_on_user_id"
   end
 
+  create_table "passwordless_sessions", force: :cascade do |t|
+    t.string "authenticatable_type"
+    t.bigint "authenticatable_id"
+    t.datetime "timeout_at", null: false
+    t.datetime "expires_at", null: false
+    t.datetime "claimed_at"
+    t.text "user_agent", null: false
+    t.string "remote_addr", null: false
+    t.string "token", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["authenticatable_type", "authenticatable_id"], name: "authenticatable"
+  end
+
   create_table "ratings", force: :cascade do |t|
     t.integer "value"
     t.bigint "user_id", null: false
@@ -80,8 +94,8 @@ ActiveRecord::Schema.define(version: 2020_08_25_124117) do
   create_table "tickets", force: :cascade do |t|
     t.string "description"
     t.boolean "solved"
-    t.bigint "mom_id", null: false
-    t.bigint "helper_id", null: false
+    t.bigint "mom_id"
+    t.bigint "helper_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["helper_id"], name: "index_tickets_on_helper_id"

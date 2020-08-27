@@ -5,17 +5,22 @@
 
   <br><br>
 
-  <div>
-   <h1><strong>DEBUG.mom</strong></h1>
-   <p>Helps solving tech issues</p>
+  <div class="home-text">
+    <h1 class="ml9">
+    <span class="text-wrapper">
+    <span class="letters">DEBUG.mom</span>
+    </span>
+    </h1>
+    <p>Helps solving tech issues</p>
   </div>
 
   <div class="buttons-home">
-    <a class="btn btn-yellow btn-yellow-home" href="#">I need help</a>
+    <%= link_to "I need help", new_ticket_path, class: "btn btn-yellow btn-yellow-home" %>
     <br> <br>
     <a class="btn btn-black btn-black-home" href="#">I can offer help</a>
   </div>
 
 
 </div><!--#container-->
+
 
