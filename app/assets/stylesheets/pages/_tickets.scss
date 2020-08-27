@@ -1,0 +1,68 @@
+// Specific CSS for tickets/new page
+.tickets-container {
+  text-align: center;
+  margin: 45px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+
+
+.tickets-container h1 {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 34px;
+  line-height: 54px;
+}
+
+.tickets-container strong {
+  font-size: 44px;
+}
+
+.type-field-tickets {
+  border-color: #FFBD12;
+  border-radius: 10px;
+  width: 327px ;
+  height: 109px !important;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+
+  &:hover {
+    width: 335px ;
+    height: 120px !important;
+  }
+}
+
+.text-spot {
+  //background-color: #FFBD12;
+  margin-top: 10px;
+  border-radius: 8px;
+  border-color: black;
+  
+}
+
+.audio-spot{
+  justify-content: center;
+}
+
+.audio-spot h4 {
+  margin: 10px;
+}
+
+#microphone{
+  width: 79px;
+  height: 81px;
+
+  &:hover {
+    width: 85px;
+    height: 90px;
+    cursor: pointer;
+  }
+}
+
+.or {
+  margin-right: 20px;
+}
+
