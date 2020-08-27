@@ -9,7 +9,9 @@ Rails.application.routes.draw do
   end
   
   get '/components_test', to: 'pages#components_test'
-  
+
+  get '/summary', to: 'pages#summary'
+
   get '/success', to: 'pages#success'
 
   get '/users/sign_in'
