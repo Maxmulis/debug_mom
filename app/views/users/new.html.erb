@@ -4,15 +4,17 @@
 
 
   <h1>Contact form</h1>
-  <div class="container">
+  <div class="form_users_container">
 
     <%= simple_form_for [ @ticket, @user ] do |f| %>
-    <%= f.input :username, label: 'Full name'%>
-    <%= f.input :email%>
-    <%= f.button :submit %>
+    <%= f.input :username, label: false, placeholder: 'Full name', wrapper_html: { class: 'form_users' }%>
+    <%= f.input :email, label: false, placeholder: 'Email', wrapper_html: { class: 'form_users' }  %>
+    <%= f.button :submit, "send", class: "btn-yellow" %>
 
     <% end %>
   </div>
 </div>
+
+
 
 

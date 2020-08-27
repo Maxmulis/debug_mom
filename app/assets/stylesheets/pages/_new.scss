@@ -1,9 +1,24 @@
 .users-container {
-  image: center;
-  margin: 45px;
-}
+  margin: auto;
+  text-align: center;
 
 h1 {
   font-size: 35px;
   text-align: center;
+  margin-top: 50px;
+  margin-bottom: 30px;
+  font-weight: bold;
+  }
+}
+
+.form_users {
+  height: 60px;
+  margin-left: 95px;
+  margin-right: 95px;
+
+
+}
+
+.button_user {
+  background-color: red;
 }
