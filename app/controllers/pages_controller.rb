@@ -6,13 +6,8 @@ class PagesController < ApplicationController
   end
 
   def components_test
-
   end
 
-  def summary
+  def success_page
   end
-
-  def success
-  end
-
 end
