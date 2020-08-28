@@ -1,6 +1,6 @@
 <div class="tickets-container">
 
-<h1 class="text-tickets"><strong>Choose</strong> how to report an issue:</h1>
+<h4><strong>Choose how to report an issue:</strong></h4>
 
   <%= simple_form_for @ticket do |f| %>
 
@@ -11,7 +11,7 @@
     <br>
     <div class="or"><h3>OR</h3></div>
     <br>
-    
+
     <div class ="form-inline audio-spot">
     <h4>Record </h4>
     <%= image_tag "microphone.png", id: "microphone" %>
@@ -21,15 +21,15 @@
 
     <br><br>
     <div>
-      <h3>You also can</h3>
+      <h5><strong>You also can</strong></h5>
       <p>upload a photo (not mandatory)</p>
     <div>
     <br>
-    
-    <%= f.input :photos, as: :file, input_html: { multiple: true }, label: false; %>
+    <%= f.input :photos, as: :file, input_html: { multiple: true , class: "inputfile" }%>
+
     <br>
      <%= f.button :submit, value: "Submit", class: "btn btn-yellow btn-yellow-home" %>
-   
+
   <% end %>
 
 </div><!--container-->
