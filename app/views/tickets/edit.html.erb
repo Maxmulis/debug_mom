@@ -2,7 +2,7 @@
 <div class="container">
   <%= simple_form_for @ticket do |f| %>
   <%= f.input :description %>
-  <%= f.input :photos, as: :file, input_html: { multiple: true } %>
+  <%= f.input :photos, as: :file, input_html: { multiple: true, class: "inputfile" }  %>
   <div>
     <h3>Currently uploaded pictures:</h3>
     <% @ticket.photos.each do |photo| %>
