@@ -1,0 +1,27 @@
+<div class="tickets-show-container"> 
+
+  <h1><strong>Is all information correct?</strong></h1>
+  <br>
+
+  <div class="card-show"> 
+  
+  <div class="description-show">
+    <h4><strong>Issue:</strong></h4>
+    <%= @ticket.description %>
+  </div>
+
+  
+    <h4 class="upload-text"><strong>Uploaded pictures:</strong></h4>
+    
+      <% @ticket.photos.each do |photo| %>
+        <%= cl_image_tag photo.key, height: 200, width: 300, crop: :fill, class: "img-show" %>
+      <% end %>
+  </div>
+  
+
+  <br>
+<%= link_to "Yes, continue", summary_path, class: "btn btn-yellow btn-yellow-show" %>
+  <br>
+  <%= link_to "No, I want to change", edit_ticket_path(@ticket), class: "btn btn-black btn-black-show" %>
+
+</div><!--#container-->

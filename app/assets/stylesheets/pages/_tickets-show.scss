@@ -1,0 +1,34 @@
+.tickets-show-container {
+  text-align: center;
+  margin: 45px;
+  display: flex;
+  flex-direction: column; 
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+
+.card-show {
+  background-color: #FFBD12;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(10, 9, 9, 0.37); 
+}
+
+.description-show {
+  text-align: left;
+  padding: 10px;
+  width:335px; 
+  display: inline-block;
+}
+
+.upload-text {
+  display: table;
+  padding-left: 10px;
+}
+
+.img-show{
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  background-color: white;
+}

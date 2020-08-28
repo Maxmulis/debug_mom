@@ -3,6 +3,10 @@ class TicketsController < ApplicationController
   def index
   end
 
+  def show
+    @ticket = Ticket.find(params[:id])
+  end
+
   def new
     @ticket = Ticket.new
   end
@@ -15,6 +19,16 @@ class TicketsController < ApplicationController
     else
       render :new
     end
+  end
+
+  def edit
+    @ticket = Ticket.find(params[:id])
+  end
+
+  def update
+    @ticket = Ticket.find(params[:id])
+    @ticket.update(ticket_params)
+    redirect_to ticket_path(@ticket)
   end
 
   private

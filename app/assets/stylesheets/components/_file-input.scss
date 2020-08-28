@@ -1,0 +1,27 @@
+.inputfile {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+
+.ticket_photos{
+  label {
+    width: 148px;
+    height: 133px;
+    background-image: url("placeholder.png");
+    background-repeat: no-repeat;
+    font-size: 1.25em;
+    font-weight: 700;
+    color: transparent;
+    background-color: transparent;
+    display: inline-block;
+
+    &:hover {
+      cursor:pointer;
+      transform: scale(1.05);
+    }
+  }
+}

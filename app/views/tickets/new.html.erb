@@ -1,8 +1,37 @@
-<h1>Submit your issue</h1>
-<div class="container">
+<div class="tickets-container">
+
+<h4><strong>Choose how to report an issue:</strong></h4>
+
   <%= simple_form_for @ticket do |f| %>
-  <%= f.input :description %>
-  <%= f.input :photos, as: :file, input_html: { multiple: true } %>
-  <%= f.button :submit %>
+
+      <br>
+      <h4>Write us</h4>
+      <%= f.input :description, as: :text, placeholder: "My problem is...", input_html: { class: "type-field-tickets" }, label: false; %>
+
+    <br>
+    <div class="or"><h3>OR</h3></div>
+    <br>
+
+    <div class ="form-inline audio-spot">
+    <h4>Record </h4>
+    <%= image_tag "microphone.png", id: "microphone" %>
+    <h4> an audio</h4>
+      <!--<%= f.input :audio, as: :file, input_html: { accept: "audio/*;capture=microphone"}, label: false; %> -->
+    </div>
+
+    <br><br>
+    <div>
+      <h5><strong>You also can</strong></h5>
+      <p>upload a photo (not mandatory)</p>
+    <div>
+    <br>
+    <%= f.input :photos, as: :file, input_html: { multiple: true , class: "inputfile" }%>
+
+    <br>
+     <%= f.button :submit, value: "Submit", class: "btn btn-yellow btn-yellow-home" %>
+
   <% end %>
-</div>
+
+</div><!--container-->
+
+

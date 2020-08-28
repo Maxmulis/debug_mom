@@ -1,0 +1,17 @@
+<h1>Make changes to your issue</h1>
+<div class="container">
+  <%= simple_form_for @ticket do |f| %>
+  <%= f.input :description %>
+  <%= f.input :photos, as: :file, input_html: { multiple: true } %>
+  <div>
+    <h3>Currently uploaded pictures:</h3>
+    <% @ticket.photos.each do |photo| %>
+      <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
+    <% end %>
+  </div>
+  <%= f.button :submit, class: "btn btn-yellow btn-yellow-home" %>
+  <% end %>
+</div>
+
+
+
