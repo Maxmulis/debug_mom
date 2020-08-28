@@ -25,16 +25,19 @@
     <%= f.input :photos, as: :file, input_html: { multiple: true }, label: false; %>
     <%= f.input :video, as: :file, label: false %>
     <br>
-    <div>
-      <img id="start" src="home_guy"/>
-      <img id="stop" src="home_guy"/>
-      <!-- <button id="start">Start</button>
-      <button id="stop">End</button> -->
-      <div>
-        <video style="border: 1px solid black" id="live" width="300" height="200" autoplay muted></video>
-      </div>
-    </div>
+
 
      <%= f.button :submit, value: "Submit", class: "btn btn-yellow btn-yellow-home" %>
 
-  <% end %>
+
+
+<% end %>
+<div>
+  <img id="start" src="home_guy"/>
+  <img id="stop" src="home_guy"/>
+  <!-- <button id="start">Start</button>
+  <button id="stop">End</button> -->
+  <div>
+    <video style="border: 1px solid black" id="live" width="300" height="200" autoplay muted></video>
+  </div>
+</div>

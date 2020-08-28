@@ -6,6 +6,10 @@
     <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
   <% end %>
 </div>
+Audio files:
+<p>
+  <video src="<%= url_for(@ticket.video) %>" height="100" width="200" loop muted="muted" autoplay controls></video>
+</p>
 
 <%= link_to "Yes, continue", summary_path, class: "btn btn-yellow btn-yellow-home" %>
 <%= link_to "No, I want to change", edit_ticket_path(@ticket), class: "btn btn-black btn-black-home" %>
