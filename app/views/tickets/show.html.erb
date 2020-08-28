@@ -1,21 +1,27 @@
 <div class="tickets-show-container"> 
 
-  <h1><strong>Is all information correct?</strong></h1>
+  <h1><strong>Plese, check if everything is correct</strong></h1>
   <br>
 
   <div class="card-show"> 
   
-  <div class="description-show">
-    <h4><strong>Issue:</strong></h4>
-    <%= @ticket.description %>
-  </div>
+    <div class="description-show">
+      <h4><strong>Issue:</strong></h4>
+      <%= @ticket.description %>
+    </div>
 
-  
-    <h4 class="upload-text"><strong>Uploaded pictures:</strong></h4>
-    
-      <% @ticket.photos.each do |photo| %>
-        <%= cl_image_tag photo.key, height: 200, width: 300, crop: :fill, class: "img-show" %>
-      <% end %>
+      <div class="display-img-flex">
+       <h4 class="upload-text"><strong>Uploaded pictures:</strong></h4>
+
+       <% if @ticket.photos.attached?  %>
+          <% @ticket.photos.each do |photo| %>
+            <%= cl_image_tag photo.key, height: 200, width: 300, crop: :fill, class: "img-show" %>   
+          <% end %>
+        <% else %>
+          <p>Here could be your picture</p>
+          <%= image_tag "no-img.png", crop: :fill, class: "img-show" %>
+        <% end %>
+      </div>
   </div>
   
 
