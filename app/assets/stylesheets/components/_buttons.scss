@@ -10,7 +10,8 @@
   border: 1px solid black;
 
   &:hover {
-    padding: 10px 28px;
+    //padding: 10px 28px;
+    transform: scale(1.1);
   }
 }
 
@@ -26,7 +27,8 @@
 
   &:hover {
     color: white;
-    padding: 10px 28px;
+    //padding: 10px 28px;
+    transform: scale(1.1);
   }
 }
 
@@ -84,7 +86,7 @@
   
   &:hover {
     padding: 10px 75px; 
-}
+  }
 }
 
 .btn-black-show {
@@ -94,3 +96,4 @@
     padding: 10px 47px;
   }
 }
+
