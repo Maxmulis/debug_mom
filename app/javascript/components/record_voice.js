@@ -1,53 +1,63 @@
+// url: "https://api.cloudinary.com/v1_1/ddam4wprg/video/upload"
 import Rails from "@rails/ujs";
 
 const initRecordVideo = () => {
 
-  const form = document.querySelector("form");
-    const uploadToCloudinary  = (video) => {
-      const formData = new FormData(form);
-      formData.append('video[file]', video, 'my_video.mp4');
-      Rails.ajax({
-        url: "https://api.cloudinary.com/v1_1/ddam4wprg/video/upload",
-        type: "post",
-        data: formData
-      });
-    }
-
   const start = document.getElementById("start");
   const stop = document.getElementById("stop");
   const live = document.getElementById("live");
+  const form = document.querySelector("form");
+
   const stopVideo = () => {
     live.srcObject.getTracks().forEach(track => track.stop());
   }
-  // stop.addEventListener("click", stopVideo);
+
+  stop.addEventListener("click", stopVideo);
+
   const stopRecording = () => {
-    return new Promise(resolve => stop.addEventListener("click",   resolve));
+    return new Promise(resolve => stop.addEventListener("click", resolve));
   }
+
   const startRecording = (stream) => {
     const recorder = new MediaRecorder(stream);
     let data = [];
-  recorder.ondataavailable = event => data.push(event.data);
+
+    recorder.ondataavailable = event => data.push(event.data);
     recorder.start();
-  const stopped = new Promise((resolve, reject) => {
+
+    const stopped = new Promise((resolve, reject) => {
       recorder.onstop = resolve;
       recorder.onerror = event => reject(event.name);
     });
-  const recorded = stopRecording().then(
+
+    const recorded = stopRecording().then(
       () => {
         stopVideo();
         recorder.state == "recording" && recorder.stop();
       }
     );
-  return Promise.all([
+
+    return Promise.all([
       stopped,
       recorded
     ])
     .then(() => data);
   }
+
+  const uploadToCloudinary  = (video) => {
+    const formData = new FormData(form);
+    formData.append('video[video]', video, 'my_video.mp4');
+    Rails.ajax({
+      url: "/tickets",
+      type: "post",
+      data: formData
+    })
+  }
+
   start.addEventListener("click", () => {
     navigator.mediaDevices.getUserMedia({
-      video: true,
-      audio: true
+      audio: true,
+      video: true
     })
     .then(stream => {
       live.srcObject = stream;
@@ -62,4 +72,5 @@ const initRecordVideo = () => {
     })
   });
 }
+
 export { initRecordVideo };

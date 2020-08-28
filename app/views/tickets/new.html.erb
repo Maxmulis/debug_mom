@@ -2,43 +2,7 @@
 
 <h1 class="text-tickets"><strong>Choose</strong> how to report an issue:</h1>
 
-  <%= simple_form_for @ticket do |f| %>
-
-      <br>
-      <h4>Write us</h4>
-      <%= f.input :description, as: :text, placeholder: "My problem is...", input_html: { class: "type-field-tickets" }, label: false; %>
-
-    <br>
-    <div class="or"><h3>OR</h3></div>
-    <br>
-
-    <div class ="form-inline audio-spot">
-    <h4>Record </h4>
-    <%= image_tag "microphone.png", id: "microphone" %>
-    <h4> an audio</h4>
-      <!--<%= f.input :audio, as: :file, input_html: { accept: "audio/*;capture=microphone"}, label: false; %> -->
-    </div>
-
-    <br><br>
-    <div>
-      <h3>You also can</h3>
-      <p>upload a photo (not mandatory)</p>
-    <div>
-    <br>
-
-    <%= f.input :photos, as: :file, input_html: { multiple: true }, label: false; %>
-    <br>
-    <div>
-      <img id="start" src="home_guy"/>
-      <img id="stop" src="home_guy"/>
-      <div>
-        <video style="border: 1px solid black" id="live" width="300" height="200" autoplay muted></video>
-      </div>
-    </div>
-
-     <%= f.button :submit, value: "Submit", class: "btn btn-yellow btn-yellow-home" %>
-
-  <% end %>
+  <%= render 'form', ticket: @ticket %>
 
 </div><!--container-->
 
