@@ -34,6 +34,6 @@ class TicketsController < ApplicationController
   private
 
   def ticket_params
-    params.require(:ticket).permit(:description, photos: [])
+    params.require(:ticket).permit(:description, :file, photos: [])
   end
 end
