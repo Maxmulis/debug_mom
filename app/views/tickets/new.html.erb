@@ -1,6 +1,6 @@
 <div class="tickets-container">
 
-<h4><strong>Choose how to report an issue:</strong></h4>
+<h4><strong>Report an issue:</strong></h4>
 
   <%= simple_form_for @ticket do |f| %>
 
@@ -21,8 +21,7 @@
 
     <br><br>
     <div>
-      <h5><strong>You also can</strong></h5>
-      <p>upload a photo (not mandatory)</p>
+      <h4>You can also</h4>
     <div>
     <br>
     <%= f.input :photos, as: :file, input_html: { multiple: true , class: "inputfile" }%>

@@ -3,11 +3,11 @@
   <%= image_tag "contact.png" %>
 
 
-  <h1>Contact form</h1>
+  <h1>What's your name and e-mail?</h1>
   <div class="form_users_container">
 
     <%= simple_form_for [ @ticket, @user ] do |f| %>
-    <%= f.input :username, label: false, placeholder: 'Full name', wrapper_html: { class: 'form_users' }%>
+    <%= f.input :username, label: false, placeholder: 'Name', wrapper_html: { class: 'form_users' }%>
     <%= f.input :email, label: false, placeholder: 'Email', wrapper_html: { class: 'form_users' }  %>
     <%= f.button :submit, "send >", class: "btn-yellow btn-yellow-home" %>
 
