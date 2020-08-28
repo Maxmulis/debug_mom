@@ -1,21 +1,21 @@
-<div class="tickets-show-container"> 
+<div class="tickets-show-container">
 
-  <h1><strong>Plese, check if everything is correct</strong></h1>
+  <h1><strong>Is everything correct?</strong></h1>
   <br>
 
-  <div class="card-show"> 
-  
+  <div class="card-show">
+
     <div class="description-show">
-      <h4><strong>Issue:</strong></h4>
+      <h4><strong>Description:</strong></h4>
       <%= @ticket.description %>
     </div>
 
       <div class="display-img-flex">
-       <h4 class="upload-text"><strong>Uploaded pictures:</strong></h4>
+       <!-- <h4 class="upload-text"><strong>Uploaded pictures:</strong></h4> -->
 
        <% if @ticket.photos.attached?  %>
           <% @ticket.photos.each do |photo| %>
-            <%= cl_image_tag photo.key, height: 200, width: 300, crop: :fill, class: "img-show" %>   
+            <%= cl_image_tag photo.key, height: 200, width: 300, crop: :fill, class: "img-show" %>
           <% end %>
         <% else %>
           <p>Here could be your picture</p>
@@ -23,7 +23,7 @@
         <% end %>
       </div>
   </div>
-  
+
 
   <br>
 <%= link_to "Yes, continue", summary_path, class: "btn btn-yellow btn-yellow-show" %>
