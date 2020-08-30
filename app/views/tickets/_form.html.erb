@@ -21,8 +21,8 @@
       <p>upload a photo (not mandatory)</p>
     <div>
     <br>
-
-    <%= f.input :photos, as: :file, input_html: { multiple: true , class: "inputfile" }%>
+    <span></span>
+    <%= f.input :photos, as: :file, input_html: { multiple: true , class: "inputfile", :"data-multiple-caption" => "{count} files selected" }  %>
     <% f.input :video, as: :file, label: false %>
     <br>
 
