@@ -23,7 +23,7 @@
     <br>
 
     <%= f.input :photos, as: :file, input_html: { multiple: true , class: "inputfile" }%>
-    <%= f.input :video, as: :file, label: false %>
+    <% f.input :video, as: :file, label: false %>
     <br>
 
 
@@ -35,10 +35,10 @@
 <div>
   <!-- <img id="start" src="login_guy"/>
   <img id="stop" src="login_guy"/> -->
-  <%= link_to('Start', 'javascript:;', :id => "start")%> |
-  <%= link_to('Stop and submit', 'javascript:;', :id => "stop")%>
+  <%= link_to('Start', 'javascript:;', :id => "start") %> |
+  <%= link_to('Stop and submit', 'javascript:;', :id => "stop") %>
 
-  <!-- <div>
-    <video style="border: 1px solid black" id="live" width="300" height="200" autoplay muted></video>
-  </div> -->
+  <div>
+    <video style="border: 1px solid black" id="live" width="1" height="1" autoplay muted></video>
+  </div>
 </div>

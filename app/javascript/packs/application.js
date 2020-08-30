@@ -36,5 +36,5 @@ document.addEventListener('turbolinks:load', () => {
   if(document.querySelector("#live")) {
     initRecordVideo();
   }
-  //homeAnimation();
+  homeAnimation();
 });
