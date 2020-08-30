@@ -1,0 +1,27 @@
+.users-container {
+  text-align: center;
+  align-items: center;
+
+  h1 {
+  font-size: 1.5em;
+  text-align: center;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+  font-weight: bold;
+  }
+}
+
+.form_users {
+  height: 3em;
+}
+
+.user-person-img {
+  border-radius: 1em;
+}
+
+
+.form_users_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

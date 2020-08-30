@@ -1,15 +1,36 @@
-<h3>Description:</h3>
-<%= @ticket.description  %>
-<h3>Currently uploaded pictures:</h3>
-<div>
-  <% @ticket.photos.each do |photo| %>
-    <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
-  <% end %>
-</div>
-Audio files:
-<p>
-  <video src="<%= url_for(@ticket.video) %>" height="200" width="300" loop controls></video>
-</p>
+<div class="tickets-show-container">
 
-<%= link_to "Yes, continue", summary_path, class: "btn btn-yellow btn-yellow-home" %>
-<%= link_to "No, I want to change", edit_ticket_path(@ticket), class: "btn btn-black btn-black-home" %>
+  <h1><strong>Is everything correct?</strong></h1>
+  <br>
+
+  <div class="card-show">
+
+    <div class="description-show">
+      <h4><strong>Description:</strong></h4>
+      <%= @ticket.description %>
+    </div>
+
+      <div class="display-img-flex">
+       <!-- <h4 class="upload-text"><strong>Uploaded pictures:</strong></h4> -->
+
+       <% if @ticket.photos.attached?  %>
+          <% @ticket.photos.each do |photo| %>
+            <%= cl_image_tag photo.key, height: 200, width: 300, crop: :fill, class: "img-show" %>
+          <% end %>
+        <% else %>
+          <p>Here could be your picture</p>
+          <%= image_tag "no-img.png", crop: :fill, class: "img-show" %>
+        <% end %>
+      </div>
+  </div>
+
+  Audio files:
+  <p>
+    <video src="<%= url_for(@ticket.video) %>" height="200" width="300" loop controls></video>
+  </p>
+  <br>
+  <%= link_to "Yes, continue", summary_path, class: "btn btn-yellow btn-yellow-show" %>
+  <br>
+  <%= link_to "No, I want to change", edit_ticket_path(@ticket), class: "btn btn-black btn-black-show" %>
+
+</div><!--#container-->

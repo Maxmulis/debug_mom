@@ -3,15 +3,13 @@
     <%= image_tag "question.png" %>
     </div>
 
-      <h2> Would you like to <span style = "display: block;">submit another issue?</span></h1>
+      <h2>Anything else we can help you with?</h2>
 
 
     <div>
-      <%= link_to "Yes please", new_ticket_path, class: "btn btn-yellow btn-yellow-home" %>
+      <%= link_to "I'm good", success_path, class: "btn btn-yellow" %>
         <br><br>
-      <%= link_to "No, thank you", success_path, class: "btn btn-black btn-black-home" %>
+       <%= link_to "Submit New Issue", new_ticket_path, class: "btn btn-black" %>
     </div>
 
 </div>
-
-

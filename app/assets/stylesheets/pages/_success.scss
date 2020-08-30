@@ -1,6 +1,10 @@
 .success-container {
+  margin-top: 50px;
   text-align: center;
-  margin: 45px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 
   h1 {
     margin: 1.2em;
