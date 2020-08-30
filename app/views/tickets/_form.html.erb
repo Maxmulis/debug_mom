@@ -10,7 +10,8 @@
 
     <div class ="form-inline audio-spot">
     <h4>Record </h4>
-    <%= image_tag "microphone.png", id: "microphone" %>
+    <%= image_tag "microphone.png", :id => "start", width:'50px', height:'50px', class: 'microphone' %>
+    <%= image_tag "microphone2.png", :id => "stop", width:'50px', height:'50px', :style => "display: none", class: 'microphone'%>
     <h4> an audio</h4>
       <!--<%= f.input :audio, as: :file, input_html: { accept: "audio/*;capture=microphone"}, label: false; %> -->
     </div>
@@ -35,8 +36,9 @@
 <div>
   <!-- <img id="start" src="login_guy"/>
   <img id="stop" src="login_guy"/> -->
-  <%= link_to('Start', 'javascript:;', :id => "start") %> |
-  <%= link_to('Stop and submit', 'javascript:;', :id => "stop") %>
+  <% link_to('Start', 'javascript:;', :id => "start") %>
+  <% link_to('Stop and submit', 'javascript:;', :id => "stop") %>
+
 
   <div>
     <video style="border: 1px solid black" id="live" width="1" height="1" autoplay muted></video>

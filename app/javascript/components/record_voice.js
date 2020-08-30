@@ -19,6 +19,8 @@ const initRecordVideo = () => {
   }
 
   const startRecording = (stream) => {
+    start.style.display = "none";
+    stop.style.display = "inline"
     const recorder = new MediaRecorder(stream);
     let data = [];
 
