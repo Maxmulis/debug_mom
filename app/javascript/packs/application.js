@@ -40,5 +40,7 @@ document.addEventListener('turbolinks:load', () => {
   if(document.querySelector(".inputfile")) {
     inputFiles();
   }
-  homeAnimation();
+  if(document.querySelector('.ml9 .letters')){
+    homeAnimation();
+  }
 });
