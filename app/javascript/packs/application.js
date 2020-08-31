@@ -28,12 +28,19 @@ import "bootstrap";
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
 import { homeAnimation } from '../components/home_page';
+import { initRecordVideo } from '../components/record_voice';
+import { inputFiles } from '../components/input_files';
 
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
+  if(document.querySelector("#live")) {
+    initRecordVideo();
+  }
+  if(document.querySelector(".inputfile")) {
+    inputFiles();
+  }
   if(document.querySelector('.ml9 .letters')){
     homeAnimation();
   }
-
 });

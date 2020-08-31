@@ -25,8 +25,14 @@
   </div>
 
 
+  <% if @ticket.video.attached?  %>
+    Audio files:
+    <p>
+      <video src="<%= url_for(@ticket.video) %>" height="200" width="300" loop controls></video>
+    </p>
+  <% end %>
   <br>
-<%= link_to "Yes, continue", summary_path, class: "btn btn-yellow btn-yellow-show" %>
+  <%= link_to "Yes, continue", summary_path, class: "btn btn-yellow btn-yellow-show" %>
   <br>
   <%= link_to "No, I want to change", edit_ticket_path(@ticket), class: "btn btn-black btn-black-show" %>
 

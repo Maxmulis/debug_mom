@@ -1,0 +1,46 @@
+<%= simple_form_for @ticket do |f| %>
+
+      <br>
+      <h4>Write us</h4>
+      <%= f.input :description, as: :text, placeholder: "My problem is...", input_html: { class: "type-field-tickets" }, label: false; %>
+
+    <br>
+    <div class="or"><h3>OR</h3></div>
+    <br>
+
+    <div class ="form-inline audio-spot">
+    <h4>Record </h4>
+    <%= image_tag "microphone.png", :id => "start", width:'50px', height:'50px', class: 'microphone' %>
+    <%= image_tag "microphone2.png", :id => "stop", width:'50px', height:'50px', :style => "display: none", class: 'microphone'%>
+    <h4> an audio</h4>
+      <!--<%= f.input :audio, as: :file, input_html: { accept: "audio/*;capture=microphone"}, label: false; %> -->
+    </div>
+
+    <br><br>
+    <div>
+      <h3>You also can</h3>
+      <p>upload a photo (not mandatory)</p>
+    <div>
+    <br>
+    <span></span>
+    <%= f.input :photos, as: :file, input_html: { multiple: true , class: "inputfile", :"data-multiple-caption" => "{count} files selected" }  %>
+    <% f.input :video, as: :file, label: false %>
+    <br>
+
+
+     <%= f.button :submit, value: "Submit", class: "btn btn-yellow btn-yellow-home" %>
+
+
+
+<% end %>
+<div>
+  <!-- <img id="start" src="login_guy"/>
+  <img id="stop" src="login_guy"/> -->
+  <% link_to('Start', 'javascript:;', :id => "start") %>
+  <% link_to('Stop and submit', 'javascript:;', :id => "stop") %>
+
+
+  <div>
+    <video style="border: 1px solid black" id="live" width="1" height="1" autoplay muted></video>
+  </div>
+</div>
