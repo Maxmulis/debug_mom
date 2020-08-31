@@ -32,5 +32,8 @@ import { homeAnimation } from '../components/home_page';
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
-  homeAnimation();
+  if(document.querySelector('.ml9 .letters')){
+    homeAnimation();
+  }
+
 });
