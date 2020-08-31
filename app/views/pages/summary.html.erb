@@ -1,15 +1,14 @@
 <div class ="everything-container">
-    <div>
+  <div>
     <%= image_tag "question.png" %>
-    </div>
+  </div>
 
-      <h2>Anything else we can help you with?</h2>
+  <h2>Do you want to report another issue?</h2>
 
+  <div>
+    <%= link_to "I am good", success_path, class: "btn btn-yellow" %>
+    <br><br>
+    <%= link_to "Submit new issue", new_ticket_path, class: "btn btn-black" %>
+  </div>
 
-    <div>
-      <%= link_to "I'm good", success_path, class: "btn btn-yellow" %>
-        <br><br>
-       <%= link_to "Submit New Issue", new_ticket_path, class: "btn btn-black" %>
-    </div>
-
-</div>
+</div><!--#container-->

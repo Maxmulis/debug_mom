@@ -5,7 +5,8 @@
   <%= simple_form_for @ticket do |f| %>
 
       <br>
-      <h4>Write us</h4>
+      <h4>Describe your problem</h4>
+      <br>
       <%= f.input :description, as: :text, placeholder: "My problem is...", input_html: { class: "type-field-tickets" }, label: false; %>
 
     <br>
