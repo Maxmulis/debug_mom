@@ -26,9 +26,10 @@
 
 /* Style the accordion panel. Note: hidden by default */
 .panel {
+  max-height: 0;
+  transition: max-height 0.2s ease-out;
   padding: 0 18px;
   background-color: white;
-  display: none;
   overflow: hidden;
 }
 
