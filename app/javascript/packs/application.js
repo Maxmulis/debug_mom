@@ -46,4 +46,5 @@ document.addEventListener('turbolinks:load', () => {
   }
   if(document.getElementsByClassName('accordion-dashboard')){
     accordionAnimation();
+  };
 });
