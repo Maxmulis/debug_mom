@@ -48,7 +48,7 @@ const initRecordVideo = () => {
 
   const uploadToCloudinary  = (video) => {
     const formData = new FormData(form);
-    formData.append('ticket[video]', video, 'my_video.mp4');
+    formData.append('ticket[video]', audio, 'my_audio.mp3');
     Rails.ajax({
       url: "/tickets",
       type: "post",
@@ -68,7 +68,7 @@ const initRecordVideo = () => {
     })
     .then(() => startRecording(live.captureStream()))
     .then (recordedChunks => {
-      const recordedBlob = new Blob(recordedChunks, { type: "video/mp4" });
+      const recordedBlob = new Blob(recordedChunks, { type: "audio/mp3" });
       console.log(recordedBlob);
       uploadToCloudinary(recordedBlob);
     })
