@@ -9,11 +9,21 @@
 
 #right-of-sidebar {
   margin-top: 20px;
+  cursor: pointer;
+
+  #start:hover {
+    transform: scale(1.1);
+  }
+
 }
 
 #sidebar-right {
   width: 60vw;
   margin: 20px;
+
+  h4 {
+    padding-bottom: 10px;
+  }
 }
 
 #stars {
@@ -26,46 +36,17 @@
 
 .helper-info a {
   color: black;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
 
   &:hover{
-    color: #048878;
+    opacity: 1;
   }
 }
 
-/* Style the buttons that are used to open and close the accordion panel */
-.accordion-dashboard {
-  background-color: #f0fcfa;
-  color: #444;
-  cursor: pointer;
-  padding: 18px;
-  width: 100%;
-  text-align: left;
-  border: none;
-  outline: none;
-  transition: 0.4s;
-}
-
-/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-.active, .accordion-dashboard:hover {
-  background-color: #fdd67b;
-}
-
-/* Style the accordion panel. Note: hidden by default */
-.panel {
-  padding: 0 18px;
-  background-color: white;
-  display: none;
-  overflow: hidden;
-}
-
-.accordion-dashboard:after {
-  content: '\02795'; /* Unicode character for "plus" sign (+) */
-  font-size: 13px;
-  color: #777;
-  float: right;
-  margin-left: 5px;
-}
-
-.active:after {
-  content: "\2796"; /* Unicode character for "minus" sign (-) */
-}
+.helper-info h4 {
+  margin: 16px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  }
