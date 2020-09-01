@@ -27,10 +27,14 @@
       <%= image_tag "laptop.png", :id => "start", width:'110px', height:'100px'%>
     </div>
     <hr>
-    
+
     <div id="dashboard-ticket-container">
+    
       <% @tickets.each do |ticket| %>
-      <p><%= ticket.description %></p>
+      <button class="accordion-dashboard">Title</button>
+      <div class="panel">
+        <p><%= ticket.description %></p>
+      </div>
       <% end %>
     </div>
 
