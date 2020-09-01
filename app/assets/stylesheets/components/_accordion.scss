@@ -1,0 +1,77 @@
+// Accordion for a helper dashboard
+
+/* Style the buttons that are used to open and close the accordion panel */
+.accordion-dashboard {
+  background-color: #f0fcfa;
+  color: #444;
+  margin: 0 auto 10px;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+  border-radius: 5px;
+  box-shadow: 0 0 0 1px rgba(236,236,236,1);
+  opacity: 1;
+  transition: box-shadow .2s, opacity .4s;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .accordion-dashboard:hover {
+  background-color: #fdd67b;
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, .11);
+}
+
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  display: none;
+  overflow: hidden;
+}
+
+.accordion-dashboard:after {
+  content: '\02795'; /* Unicode character for "plus" sign (+) */
+  font-size: 13px;
+  color: #777;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2796"; /* Unicode character for "minus" sign (-) */
+}
+
+.accordion-img {
+  margin: 5px;
+  padding-bottom: 12px;
+  text-align: center;
+}
+
+#dashboard-play-img {
+  margin-right: 13px;
+  cursor: pointer;
+  
+  &:hover{
+    transform: scale(1.1);
+  }
+}
+
+#dashboard-chat-img:hover {
+  cursor: pointer;
+  
+  &:hover{
+    transform: scale(1.1);
+  }
+}
+
+#dashboard-expand-img {
+  cursor: pointer;
+  margin-right: 13px;
+  
+  &:hover{
+    transform: scale(1.1);
+  }
+}
