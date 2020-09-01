@@ -2,15 +2,34 @@ require "open-uri"
 
 puts "Creating some seeds"
 
+TicketCategory.destroy_all
+Category.destroy_all
 Ticket.destroy_all
 User.destroy_all
 
+phone = Category.new(name:"phone")
+laptop = Category.new(name:"laptop")
+internet = Category.new(name:"internet")
+
+puts "creating tickets with categories"
 
 ticket1 = Ticket.new(description:"Just can't connect to the internet in my house. Typing from my phone… did I delete part of internet? Can you help me out please?")
+TicketCategory.create!(ticket: ticket1, category: internet)
+
 ticket2 = Ticket.new(description:"I used to have really big letters and images which were very easy to read, now I cant get back to having that kind of view, can you help me to get that kind of view back?")
+TicketCategory.create!(ticket: ticket2, category: laptop)
+
 ticket3 = Ticket.new(description:"Hey,so I’m new to facebook, but everytime I want to use it, I need to type my password and username. My neighbour goes to it directly, can you show me how to do that?")
+TicketCategory.create!(ticket: ticket3, category: internet)
+
 ticket4 = Ticket.new(description:"My son helped me to order sneakers online and he used my credit card information. I’m afraid that somebody has my personal information…need help with securing my data!")# This file should contain all the record creation needed to seed the database with its default values.
+TicketCategory.create!(ticket: ticket4, category: phone)
+
 ticket5 = Ticket.new(description: "I cant find Micheles number in my contact list and I have deleted the kids as well...I can't live life this...")
+TicketCategory.create!(ticket: ticket5, category: laptop)
+
+
+puts "created tickets with categories"
 
 user1 = User.create(username:"beatriz", email:"help@me.com")
 user2 = User.create(username:"mucho_trabajo", email:"ajudame@perfavor.de")
@@ -47,4 +66,3 @@ ticket5.photos.attach(io: file, filename: 'ticket5.png', content_type: 'image/jp
 ticket5.save
 
 puts "attached photos to a 5 tickets"
-
