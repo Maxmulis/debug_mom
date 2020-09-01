@@ -1,31 +1,43 @@
 <div class="d-flex">
-  <div id="sidebar" class="px-2">
-    <h1>My info</h1>
-    <h4><%= @helper.username %></h4>
-    <h2>My info</h2>
+
+  <div id="sidebar">
+    <h4><strong> Welcome to your profile, <%= @helper.username %>! </strong></h4>
     <br>
-    <h4>Rating: * * * * *</h4>
-    <p><a href="">Achievements</a></p>
-    <p><a href="">Active tickets</a></p>
-    <p><a href="">Tickets solved</a></p>
-    <p><a href="">People helped</a></p>
-    <p><a href="">Streak</a></p>
+
+    <div class="form-inline">
+      <h5>Rating </h5>
+     <%= image_tag "stars.png", id: "stars"%>
+    </div>
+    <br>
+ 
+    <div class="helper-info">
+      <p><a href="">Achievements</a></p>
+      <p><a href="">Active tickets</a></p>
+      <p><a href="">Tickets solved</a></p>
+      <p><a href="">People helped</a></p>
+      <p><a href="">Streak</a></p>
+    </div>
   </div>
 
-  <div>
+  <div id="sidebar-right">
     <div class="d-flex justify-content-around align-items-center" id="right-of-sidebar">
       <h2>Devices:</h2>
-      <%= image_tag "home_girl.png", :id => "start", width:'110px', height:'100px'%>
-      <%= image_tag "upload-img.png", :id => "start", width:'110px', height:'100px'%>
-      <%= image_tag "placeholder.png", :id => "start", width:'110px', height:'100px'%>
+      <%= image_tag "phone.png", :id => "start", width:'110px', height:'100px'%>
+      <%= image_tag "ipad.png", :id => "start", width:'110px', height:'100px'%>
+      <%= image_tag "laptop.png", :id => "start", width:'110px', height:'100px'%>
     </div>
     <hr>
+
     <div id="dashboard-ticket-container">
+    
       <% @tickets.each do |ticket| %>
-      <p><%= ticket.description %></p>
+      <button class="accordion-dashboard">Title</button>
+      <div class="panel">
+        <p><%= ticket.description %></p>
+      </div>
       <% end %>
     </div>
 
   </div>
 
-</div>
+</div><!--#d-flex-->

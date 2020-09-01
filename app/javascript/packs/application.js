@@ -30,6 +30,7 @@ import "bootstrap";
 import { homeAnimation } from '../components/home_page';
 import { initRecordVideo } from '../components/record_voice';
 import { inputFiles } from '../components/input_files';
+import { accordionAnimation } from '../components/accordion';
 
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
@@ -43,4 +44,6 @@ document.addEventListener('turbolinks:load', () => {
   if(document.querySelector('.ml9 .letters')){
     homeAnimation();
   }
+  if(document.getElementsByClassName('accordion-dashboard')){
+    accordionAnimation();
 });
