@@ -47,19 +47,13 @@
 .accordion-img {
   margin: 5px;
   padding-bottom: 12px;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  position: relative;
 }
 
 #dashboard-play-img {
   margin-right: 13px;
-  cursor: pointer;
-  
-  &:hover{
-    transform: scale(1.1);
-  }
-}
-
-#dashboard-chat-img:hover {
   cursor: pointer;
   
   &:hover{
