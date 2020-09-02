@@ -44,7 +44,7 @@
         <div class="accordion-img">
         <%= image_tag "expand-img-btn.png", id: "dashboard-expand-img", width:'50px', height:'50px'%>
          <% if ticket.video.attached? %>
-           <video id="player-<%= number %>" class="player"  src="<%= url_for(ticket.video) %>" height="200" width="300" controls></video>
+           <video id="player-<%= number %>" style="display:none" class="player"  src="<%= url_for(ticket.video) %>" height="200" width="300" controls></video>
            <%= image_tag "play-btn.png", class: "dashboard-play-img", id:"#{number}", width:'50px', height:'50px'%>
          <% end %>
          <!--need to change path to chat below for the button-->
