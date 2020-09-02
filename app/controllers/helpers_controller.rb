@@ -2,6 +2,7 @@ class HelpersController < ApplicationController
   include Passwordless::ControllerHelpers
 
   def index
+    raise
   end
 
   def new
