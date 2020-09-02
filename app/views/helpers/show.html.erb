@@ -1,7 +1,7 @@
 <div class="d-flex">
 
   <div id="sidebar">
-    <h4><strong> Welcome to your profile, <%= @helper.username %>! </strong></h4>
+    <h4><strong> Welcome to your profile, <%= @current_user.username %>! </strong></h4>
     <br>
 
     <div class="form-inline">
@@ -48,7 +48,12 @@
            <%= image_tag "play-btn.png", class: "dashboard-play-img", id:"#{number}", width:'50px', height:'50px'%>
          <% end %>
          <!--need to change path to chat below for the button-->
-         <%= link_to "Go to chat", new_ticket_path, class: "btn btn-yellow btn-yellow-accordion" %>
+         <% if Conversation.where(ticket: ticket).count > 0%>
+            <% conversation = Conversation.where(ticket: ticket) %>
+            <%= link_to "Go to chat", ticket_conversation_path(ticket, conversation.ids[0]), class: "btn btn-yellow btn-yellow-accordion" %>
+         <% else %>
+            <%= link_to "Go to chat", ticket_conversations_path(ticket),method: :post, class: "btn btn-yellow btn-yellow-accordion" %>
+         <% end %>
         </div>
         </div>
         <% number += 1 %>
