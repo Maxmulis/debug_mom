@@ -11,7 +11,7 @@ class ConversationsController < ApplicationController
     @conversation.ticket = @ticket
     if @conversation.save
       # redirect_to category_ticket_chat_path(params[:category_id], params[:ticket_id], @chat)
-      redirect_to ticket_conversation_path(@conversation, @ticket)
+      redirect_to ticket_conversation_path(@ticket, @conversation)
     else
       raise
     end
