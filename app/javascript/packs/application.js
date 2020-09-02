@@ -30,11 +30,17 @@ import "bootstrap";
 import { homeAnimation } from '../components/home_page';
 import { initRecordVideo } from '../components/record_voice';
 import { inputFiles } from '../components/input_files';
+import { initConversationCable } from '../channels/conversation_channel';
 import { accordionAnimation } from '../components/accordion';
+import { playAudio } from '../components/play_audio';
 
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
+  if(document.getElementById('messages')){
+    initConversationCable();
+  }
+  //initConversationCable();
   if(document.querySelector("#live")) {
     initRecordVideo();
   }
@@ -46,5 +52,6 @@ document.addEventListener('turbolinks:load', () => {
   }
   if(document.getElementsByClassName('accordion-dashboard')){
     accordionAnimation();
+    playAudio();
   };
 });
