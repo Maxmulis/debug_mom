@@ -2,6 +2,7 @@ require "open-uri"
 
 puts "Creating some seeds"
 
+Conversation.destroy_all
 TicketCategory.destroy_all
 Category.destroy_all
 Ticket.destroy_all
