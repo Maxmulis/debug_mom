@@ -8,9 +8,10 @@ class ConversationsController < ApplicationController
   def create
     @conversation = Conversation.new
     @ticket = Ticket.find(params[:ticket_id])
+    @conversation.ticket = @ticket
     if @conversation.save
       # redirect_to category_ticket_chat_path(params[:category_id], params[:ticket_id], @chat)
-      redirect_to ticket_conversation_path(@conversation)
+      redirect_to ticket_conversation_path(@conversation, @ticket)
     else
       raise
     end
