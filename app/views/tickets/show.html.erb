@@ -25,12 +25,12 @@
   </div>
 
 
-  <%# if @ticket.video.attached?  %>
+  <% if @ticket.video.attached?  %>
     Audio files:
     <p>
-      <audio src="<%= url_for(@ticket.video) %>" controls></audio>
+      <video src="<%= url_for(@ticket.video) %>" height="200" width="300" controls></video>
     </p>
-  <%# end %>
+  <% end %>
   <br>
   <%= link_to "Yes, continue", summary_path, class: "btn btn-yellow btn-yellow-show" %>
   <br>
