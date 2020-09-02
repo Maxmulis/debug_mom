@@ -30,10 +30,15 @@ import "bootstrap";
 import { homeAnimation } from '../components/home_page';
 import { initRecordVideo } from '../components/record_voice';
 import { inputFiles } from '../components/input_files';
+import { initConversationCable } from '../channels/conversation_channel';
 
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
+  if(document.getElementById('messages')){
+    initConversationCable();
+  }
+  //initConversationCable();
   if(document.querySelector("#live")) {
     initRecordVideo();
   }
