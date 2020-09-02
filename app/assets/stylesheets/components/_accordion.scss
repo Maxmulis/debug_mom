@@ -53,10 +53,10 @@
   position: relative;
 }
 
-#dashboard-play-img {
+.dashboard-play-img {
   margin-right: 13px;
   cursor: pointer;
-  
+
   &:hover{
     transform: scale(1.1);
   }
@@ -65,7 +65,7 @@
 #dashboard-expand-img {
   cursor: pointer;
   margin-right: 13px;
-  
+
   &:hover{
     transform: scale(1.1);
   }
