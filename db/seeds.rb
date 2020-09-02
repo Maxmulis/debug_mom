@@ -43,9 +43,9 @@ TicketCategory.create!(ticket: ticket9, category: laptop)
 ticket10 = Ticket.new(description: "I deleted some important files, or I cant find them... not sure... I need your help!")
 TicketCategory.create!(ticket: ticket10, category: internet)
 
-
 puts "created tickets with categories"
 
+puts "creating 10 moms and Marina and Max..."
 user1 = User.create(username:"beatriz", email:"help@me.com")
 user2 = User.create(username:"mucho_trabajo", email:"ajudame@perfavor.de")
 user3 = User.create(username:"no_intiendo_nada", email:"embarasada@.it")
@@ -56,6 +56,11 @@ user7 = User.create(username:"mucho_trabajo", email:"ajudame@perfavor.de")
 user8 = User.create(username:"no_intiendo_nada", email:"embarasada@.it")
 user9 = User.create(username: "Kiki", email:"youloco@gmail.com")
 user10 = User.create(username: "Marion", email:"nocantdo@yahoo.com")
+max = User.create(username: "Max", email: "max@klauskeller.com")
+marina = User.create(username: "Marina", email: "marinkato@gmail.com")
+
+puts "Done!"
+puts "Assigning tickets to moms..."
 
 ticket1.mom = user1
 ticket2.mom = user2
@@ -68,7 +73,9 @@ ticket8.mom = user8
 ticket9.mom = user9
 ticket10.mom = user10
 
-puts "created 10 tickets"
+puts "Done!"
+
+puts "Attaching pictures to tickets..."
 
 file = URI.open("https://www.cepro.com/wp-content/uploads/2018/10/ParksTechIssues_large-1200x650.jpg")
 ticket1.photos.attach(io: file, filename: 'ticket1.png', content_type: 'image/jpg')
@@ -110,4 +117,6 @@ file = URI.open("https://i.insider.com/5c8936d026c84b24b711d224?width=1100&forma
 ticket10.photos.attach(io: file, filename: 'ticket5.png', content_type: 'image/jpg')
 ticket10.save
 
-puts "attached photos to a 10 tickets"
+puts "Done!"
+puts "--------------------------------"
+puts "Seeds have been sowed, ready to Rock n' Roll!"
