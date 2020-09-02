@@ -17,7 +17,11 @@
   <div class="buttons-home">
     <%= link_to "I need help", new_ticket_path, class: "btn btn-yellow btn-yellow-home" %>
     <br> <br>
-    <%= link_to "I can offer help", helper_path(current_user.id), class: "btn btn-black btn-black-home" %>
+    <% if current_user.nil? %>
+      <%= link_to "I can offer help", users_sign_in_path, class: "btn btn-black btn-black-home" %>
+    <% else %>
+      <%= link_to "I can offer help", helper_path(current_user.id), class: "btn btn-black btn-black-home" %>
+    <% end %>
   </div>
 
 
