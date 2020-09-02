@@ -76,6 +76,10 @@ ticket1.photos.attach(io: file, filename: 'ticket1.png', content_type: 'image/jp
 ticket1.save
 
 file = URI.open("https://cdn.powerofpositivity.com/wp-content/uploads/2015/09/woman-crying-tissue-1200x900.jpg")
+ticket1.photos.attach(io: file, filename: 'ticket1.png', content_type: 'image/jpg')
+ticket1.save
+
+file = URI.open("https://cdn.powerofpositivity.com/wp-content/uploads/2015/09/woman-crying-tissue-1200x900.jpg")
 ticket2.photos.attach(io: file, filename: 'ticket2.png', content_type: 'image/jpg')
 ticket2.save
 

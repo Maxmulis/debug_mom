@@ -60,10 +60,16 @@
                       <!-- Carousel -->
                         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                           <div class="carousel-inner">
-                            <% ticket.photos.each do |photo| %>
+                            <% ticket.photos.each_with_index do |photo, index| %>
+                            <% if index == 0 %>
                               <div class="carousel-item active">
-                                 <%= cl_image_tag photo.key, height: 500, width: 700, crop: :fill %>
-                              </div>
+                                   <%= cl_image_tag photo.key, height: 500, crop: :fill, class: "d-block w-100" %>
+                                </div>
+                              <% else %>
+                                   <div class="carousel-item">
+                                   <%= cl_image_tag photo.key, height: 500, crop: :fill, class: "d-block w-100" %>
+                                 </div>
+                              <% end %>
                             <% end%>
                           </div>
                           <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
