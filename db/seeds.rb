@@ -1,13 +1,15 @@
 require "open-uri"
 
-puts "Creating some seeds"
+puts "Deleting EVERYTHING!!"
 
 Message.destroy_all
-Convesation.destroy_all
+Conversation.destroy_all
 TicketCategory.destroy_all
 Category.destroy_all
 Ticket.destroy_all
 User.destroy_all
+
+puts "creating some categories"
 
 phone = Category.new(name:"phone")
 laptop = Category.new(name:"laptop")
