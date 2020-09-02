@@ -37,7 +37,11 @@
       <% number = 0 %>
       <% @tickets.each do |ticket| %>
 
-        <button class="accordion-dashboard"><%= ticket.description.split.first(3).join( " " ) + "..." %></button>
+        <% if ticket.mom_id.nil? %>
+            <button class="accordion-dashboard"><%= "Ticket##{ticket.id}" %></button>
+          <% else %>
+            <button class="accordion-dashboard"><%= "Ticket##{ticket.id}, posted by #{User.find(ticket.mom_id).username}" %></button>
+        <% end %>
         <div class="panel">
           <p><%= ticket.description %></p>
 
