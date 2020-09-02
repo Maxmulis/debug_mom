@@ -24,6 +24,7 @@ class HelpersController < ApplicationController
   def show
     require_user!
     @helper = User.find(params[:id])
+    @tickets = Ticket.all
   end
 
   private

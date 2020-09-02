@@ -1,0 +1,52 @@
+#sidebar {
+  background-color: #FBBD31;
+  height: 100vh;
+  width: 25vw;
+  position: sticky;
+  top: 0;
+  padding: 20px;
+}
+
+#right-of-sidebar {
+  margin-top: 20px;
+  cursor: pointer;
+
+  #start:hover {
+    transform: scale(1.1);
+  }
+
+}
+
+#sidebar-right {
+  width: 60vw;
+  margin: 20px;
+
+  h4 {
+    padding-bottom: 10px;
+  }
+}
+
+#stars {
+  width: 110px;
+  flex-flow: row wrap;
+  align-items: center;
+  margin-bottom: 10px;
+  margin-left: 8px;
+}
+
+.helper-info a {
+  color: black;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+
+  &:hover{
+    opacity: 1;
+  }
+}
+
+.helper-info h4 {
+  margin: 16px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  }
