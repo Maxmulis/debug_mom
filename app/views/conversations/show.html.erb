@@ -2,13 +2,7 @@
 <h3>Current user: <%= current_user.username  %></h3>
 <div id="messages" data-conversation-id="<%= @conversation.id %>">
   <% @conversation.messages.each do |message| %>
-    <div class="message-container" id="message-<%= message.id %>">
-      <i class="author">
-        <span><%= message.user.username %></span>
-        <small><%= message.created_at.strftime("%a %b %e at %l:%M%p") %></small>
-      </i>
-      <p><%= message.content %></p>
-    </div>
+<%= render "messages/message" %>
   <% end %>
 </div>
 
