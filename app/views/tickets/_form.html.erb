@@ -4,30 +4,25 @@
       <%= f.input :description, as: :text, placeholder: "Write here...", input_html: { class: "type-field-tickets" }, label: false; %>
       <br><br>
 
-    <div class ="form-inline audio-spot">
-    <h4>Or record <br> an audio</h4>
-    <%= image_tag "microphone.png", :id => "start", width:'140px', height:'131px', class: 'microphone' %>
-    <%= image_tag "microphone2.png", :id => "stop", width:'140px', height:'131px', :style => "display: none", class: 'microphone'%>
-      <!--<%= f.input :audio, as: :file, input_html: { accept: "audio/*;capture=microphone"}, label: false; %> -->
-    </div>
-
-    <br><br>
     <div class="form-inline img-upload-spot">
      <div>
-      <%= f.input :photos, as: :file, input_html: { multiple: true , class: "inputfile", :"data-multiple-caption" => "{count} files selected" }  %>
-      <% f.input :video, as: :file, label: false %>
-      <span></span>
-    </div>
+        <%= f.input :photos, as: :file, input_html: { multiple: true , class: "inputfile", :"data-multiple-caption" => "{count} files selected" }  %>
+        <% f.input :video, as: :file, label: false %>
+        <span></span>
+      </div>
       <br>
-      <h4>You can also <br> upload a photo</h4>
+      <h4>You can<br> upload a photo</h4>
     </div>
-    
-    
 
+    <div class ="form-inline audio-spot">
+      <h4>Record <br> an audio</h4>
+      <%= image_tag "microphone.png", :id => "start", width:'140px', height:'131px', class: 'microphone' %>
+      <%= image_tag "microphone2.png", :id => "stop", width:'140px', height:'131px', :style => "display: none", class: 'microphone'%>
+        <!--<%= f.input :audio, as: :file, input_html: { accept: "audio/*;capture=microphone"}, label: false; %> -->
+    </div>
+    <br><br>
+ 
      <%= f.button :submit, value: "Submit", class: "btn btn-yellow btn-yellow-home" %>
-
-
-
 <% end %>
 <div>
   <!-- <img id="start" src="login_guy"/>
