@@ -15,7 +15,7 @@
 
 
               <span class="mom-name"><%= message.user.username %></span>
-              <p><%= message.content %></p>
+              <p class="msg-right"><%= message.content %></p>
              <p class="time-right"><small><%= message.created_at.strftime("%a %b %e at %l:%M%p") %></small></p>
               </div>
 
@@ -28,9 +28,8 @@
         <div class="message-container left-side" id="message-<%= message.id %>">
 
           <span class="helper-name"><%= message.user.username %></span>
-          <p><%= message.content %></p>
+          <p class="msg-left"><%= message.content %></p>
           <p class="time-right"><small><%= message.created_at.strftime("%a %b %e at %l:%M%p") %></small></p>
-
         </div><!--#left-side-->
       </div>
       <% end %>
