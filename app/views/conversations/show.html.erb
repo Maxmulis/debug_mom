@@ -6,7 +6,7 @@
     <% @conversation.messages.each do |message| %>
 
       <% if message.user.username == current_user.username  %>
-        <div class="santi" data-user-id="<%= current_user.id %>">
+        <div class="santi" data-user-id="<%= current_user.id %>" data-message-id="<%= message.id %>">
           <div class="right-wrapper">
             <div class="message-container right-side" id="message-<%= message.id %>">
 

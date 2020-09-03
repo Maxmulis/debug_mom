@@ -24,9 +24,11 @@ const initConversationCable = () => {
           messagesContainer.insertAdjacentHTML('beforeend', data.html);
 
         } else {
+          console.log("This should be here")
           messagesContainer.insertAdjacentHTML('beforeend', data.html);
-          const message = document.querySelector(`[data-user-id='${data.user_id}']`);
-          document.querySelectorAll('[data-genre~="horror"]');
+          console.log(data)
+          const message = document.querySelector(`[data-message-id='${data.message_id}']`);
+          //document.querySelectorAll('[data-genre~="horror"]');
           console.log(message)
           const wrapper = message.querySelector(".right-wrapper")
           wrapper.classList.add("left-wrapper")
