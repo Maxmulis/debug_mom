@@ -1,0 +1,7 @@
+# config/meta.yml
+
+meta_product_name: "DEBUG.mom"
+meta_title: "DEBUG.mom - Helps solving tech issues"
+meta_description: "DEBUG.mom provides help for all tech related issues. Submitting your issue is fast and easy, no sign-up required! Our friendly helpers will reach out to you within minutes and help you solve your issue for free!"
+meta_image: "cover.png" # should exist in `app/assets/images/`
+# twitter_account: "@product_twitter_account"   # required for Twitter Cards
