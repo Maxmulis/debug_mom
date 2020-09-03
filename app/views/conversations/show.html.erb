@@ -1,33 +1,38 @@
 <div class="chat-container">
   <h1>Chat for a ticket #<%= Ticket.find(@conversation.ticket_id).id %> </h1>
   <hr>
+  <div class="santi" data-user-id="<%= current_user.id %>">
+
+  </div>
 
   <div id="messages" data-conversation-id="<%= @conversation.id %>">
     <% @conversation.messages.each do |message| %>
 
       <% if message.user.username == current_user.username  %>
-        <div class="right-wrapper">
-          <div class="message-container right-side" id="message-<%= message.id %>">
-             
-          
-            <span class="mom-name"><%= message.user.username %></span>
-            <p class="msg-right"><%= message.content %></p>
-           <p class="time-right"><small><%= message.created_at.strftime("%a %b %e at %l:%M%p") %></small></p>
-            </div>
-            
-          </div><!--#right-side-->
-        
-      <% else %> 
+        <div data-message-id="<%= message.id %>">
+          <div class="right-wrapper">
+            <div class="message-container right-side" id="message-<%= message.id %>">
+
+
+              <span class="mom-name"><%= message.user.username %></span>
+              <p class="msg-right"><%= message.content %></p>
+             <p class="time-right"><small><%= message.created_at.strftime("%a %b %e at %l:%M%p") %></small></p>
+              </div>
+
+            </div><!--#right-side-->
+        </div>
+
+
+      <% else %>
       <div class="left-wrapper">
         <div class="message-container left-side" id="message-<%= message.id %>">
-          
+
           <span class="helper-name"><%= message.user.username %></span>
           <p class="msg-left"><%= message.content %></p>
-          <p class="time-right"><small><%= message.created_at.strftime("%a %b %e at %l:%M%p") %></small></p> 
-          
+          <p class="time-right"><small><%= message.created_at.strftime("%a %b %e at %l:%M%p") %></small></p>
         </div><!--#left-side-->
       </div>
-      <% end %> 
+      <% end %>
 
     <% end %>
   </div>
