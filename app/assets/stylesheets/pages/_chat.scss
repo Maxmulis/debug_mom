@@ -32,6 +32,10 @@
   min-height: 75px;
 }
 
+.msg-right {
+  border-top: 1px solid black;
+}
+
 /* Darker chat container */
 .left-side {
   background-color: #00C6AE;
@@ -40,6 +44,10 @@
   margin: 10px 40px;
   min-height: 75px;
   justify-items: right;
+}
+
+.msg-left {
+  border-top: 1px solid black;
 }
 
 .left-wrapper {
