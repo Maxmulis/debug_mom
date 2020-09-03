@@ -5,7 +5,10 @@ class MessagesController < ApplicationController
     @message.conversation = @conversation
     @message.user = current_user
     if @message.save!
-      ConversationChannel.broadcast_to(@conversation, render_to_string(partial: "message", locals: { message: @message }));
+      ConversationChannel.broadcast_to(@conversation, {
+        html: render_to_string(partial: "message", locals: { message: @message}),
+        user_id: current_user.id
+      })
       # redirect_to ticket_conversation_path(@conversation, anchor: "message-#{@message.id}")
     else
       render "conversation/show"
