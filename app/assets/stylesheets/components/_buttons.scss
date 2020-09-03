@@ -81,7 +81,8 @@
 
 .btn-yellow-show {
   padding: 8px 71px;
-  
+  margin-top: 35px;
+
   &:hover {
     padding: 10px 75px; 
   }
@@ -89,10 +90,18 @@
 
 .btn-black-show {
   padding: 8px 43px;
+  margin-top: 22px;
 
   &:hover{
     padding: 10px 47px;
   }
+}
+
+.btn-black-dashboard {
+  font-size: 20px;
+  min-width: 130px;
+  max-height: 40px;
+  cursor: pointer;
 }
 
 .btn-yellow-accordion {
