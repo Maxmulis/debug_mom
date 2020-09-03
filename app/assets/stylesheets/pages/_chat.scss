@@ -24,24 +24,30 @@
 
 /* Chat containers */
 .right-side {
-  // border: 2px solid black;
   background-color: #FFBD12;
-  border-radius: 20px;
-  padding: 10px;
+  border-radius: 1.125rem 1.125rem 0 1.125rem;
+  padding: 0.5rem 1rem;
   margin: 10px 40px;
   justify-items: right;
-  min-height: 120px;
+  min-height: 75px;
+}
+
+.msg-right {
+  border-top: 1px solid black;
 }
 
 /* Darker chat container */
 .left-side {
-  // border: 2px solid black;
   background-color: #00C6AE;
-  border-radius: 20px;
-  padding: 10px;
+  border-radius: 1.125rem 1.125rem 1.125rem 0;
+  padding: 0.5rem 1rem;
   margin: 10px 40px;
-  min-height: 120px;
+  min-height: 75px;
   justify-items: right;
+}
+
+.msg-left {
+  border-top: 1px solid black;
 }
 
 .left-wrapper {
@@ -71,4 +77,8 @@
     width: 70vw;
     border-radius: 50px;
   }
+}
+
+.helper-name, .mom-name {
+  font-weight: bolder;
 }
