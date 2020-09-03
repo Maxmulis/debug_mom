@@ -4,20 +4,20 @@
     <h4><strong> Welcome to your profile, <%= @current_user.username %>! </strong></h4>
     <br>
 
-    <div class="form-inline">
+    <div class="form-inline rating">
       <h5>Rating </h5>
       <%= image_tag "stars.png", id: "stars"%>
     </div>
     <br>
 
     <div class="helper-info">
-      <p><a href="">Achievements</a></p>
-      <p><a href="">Active tickets</a></p>
-      <p><a href="">Tickets solved</a></p>
-      <p><a href="">People helped</a></p>
-      <p><a href="">Streak</a></p>
+      <p> <%= image_tag "win.png", width:'40px', height:'40px'%><a href="">  Achievements</a></p>
+      <p><%= image_tag "five.png", width:'40px', height:'40px'%><a href="">  Active tickets</a></p>
+      <p><%= image_tag "nine.png", width:'40px', height:'40px'%><a href="">  Tickets solved</a></p>
+      <p><%= image_tag "seven.png", width:'40px', height:'40px'%><a href="">  People helped</a></p>
+      <p><%= image_tag "best.png", width:'40px', height:'40px'%><a href="">  Streak</a></p>
 
-      <h4>Log out</h4>
+      <h4 class="btn-black btn-black-dashboard">Log out</h4>
     </div>
 
 
