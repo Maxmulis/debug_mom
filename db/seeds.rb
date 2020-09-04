@@ -61,8 +61,8 @@ user8 = User.create(username:"no_intiendo_nada", email:"embarasada@.it")
 user9 = User.create(username: "Kiki", email:"youloco@gmail.com")
 user10 = User.create(username: "Marion", email:"nocantdo@yahoo.com")
 max = User.create(username: "Max", email: "max@klauskeller.com")
-marina = User.create(username: "Marina", email: "marinkato@gmail.com")
-ivo = User.create(username: "XXXX", email: "ipd3995@gmail.com")
+marina = User.create(username: "Chris", email: "marinkato@gmail.com")
+ivo = User.create(username: "Milica", email: "ipd3995@gmail.com")
 
 puts "Done!"
 puts "Assigning tickets to moms..."
