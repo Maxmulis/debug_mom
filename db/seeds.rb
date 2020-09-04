@@ -60,9 +60,9 @@ user7 = User.create(username:"mucho_trabajo", email:"ajudame@perfavor.de")
 user8 = User.create(username:"no_intiendo_nada", email:"embarasada@.it")
 user9 = User.create(username: "Kiki", email:"youloco@gmail.com")
 user10 = User.create(username: "Marion", email:"nocantdo@yahoo.com")
-max = User.create(username: "Max", email: "max@klauskeller.com")
+max = User.create(username: "Anna", email: "max@klauskeller.com")
 marina = User.create(username: "Chris", email: "marinkato@gmail.com")
-ivo = User.create(username: "Milica", email: "ipd3995@gmail.com")
+ivo = User.create(username: "Bob", email: "ipd3995@gmail.com")
 
 puts "Done!"
 puts "Assigning tickets to moms..."
